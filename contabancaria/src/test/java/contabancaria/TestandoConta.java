@@ -4,20 +4,23 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.BeforeEach;
+
 /**
  * Unit test for simple App.
  */
 class TestandoConta {
-    /*
-     * Rigorous Test.
-     */
+ 
     Conta conta;
-    
+    @BeforeEach
+    public void setUp() {
+        conta = new Conta();
+    }
 
 
     @Test
     public void TesteDeposito() {
 
-        assertEquals(50,35);
+        assertEquals(30,conta.deposito(60));
     }
 }
