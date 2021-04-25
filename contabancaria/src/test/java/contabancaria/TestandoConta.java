@@ -21,6 +21,6 @@ class TestandoConta {
     @Test
     public void TesteDeposito() {
 
-        assertEquals(30,conta.deposito(60));
+        assertEquals(conta.getSaldo() + 60,conta.deposito(60));
     }
 }

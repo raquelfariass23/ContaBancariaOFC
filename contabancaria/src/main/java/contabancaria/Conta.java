@@ -9,10 +9,10 @@ public class Conta {
 
    }
 
-   private double getSaldo(){
-
+    public double getSaldo(){
       return this.saldo;
-   }
+     }
+
 
     void setSaldo(double money){
          this.saldo = money;
