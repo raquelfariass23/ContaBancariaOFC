@@ -3,10 +3,13 @@ package contabancaria;
 public class Conta {
    double saldo = 40; 
    
-   public double deposito(double money){
-      setSaldo(getSaldo() + money);
-      return getSaldo();
+   public void deposito(double money){
 
+      if(money==0 || money<0 ){
+         setSaldo(getSaldo() + money);
+       getSaldo();
+      }
+      
    }
 
     public double getSaldo(){
