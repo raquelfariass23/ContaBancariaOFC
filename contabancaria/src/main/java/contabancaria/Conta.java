@@ -1,14 +1,15 @@
 package contabancaria;
 
 public class Conta {
-   double saldo = 40; 
+   double saldo = 40.0; 
    
-   public void deposito(double money){
+   public double deposito(double money){
 
       if(money==0 || money<0 ){
          setSaldo(getSaldo() + money);
-       getSaldo();
+    
       }
+        return money+getSaldo();
       
    }
 
