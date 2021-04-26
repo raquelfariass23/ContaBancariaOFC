@@ -3,6 +3,7 @@ package contabancaria;
 import org.junit.jupiter.api.Test;
 
 import contabancaria.Conta.OperacaoInvalida;
+import contabancaria.Conta.SaldoInsuficiente;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -25,7 +26,7 @@ class TestandoConta {
         assertEquals(conta.getSaldo() + 40,conta.deposito(40));
     }
     @Test
-    public void TesteSaque(){
-        assertEquals(conta.getSaldo() - 130,conta.saque(130) );
+    public void TesteSaque() throws SaldoInsuficiente{
+        assertEquals(conta.getSaldo() - (1220),conta.saque(1220) );
     }
 }

@@ -19,10 +19,12 @@ public class Conta {
              return getSaldo();
    }
 
+   public class SaldoInsuficiente extends Exception{
+      private static final long serialVersionUID=1L;
+    }
+   public double saque(double money) throws SaldoInsuficiente {
 
-   public double saque(double money){
-
-      if(money>getSaldo() || money<=0){
+      if(money>getSaldo() || money==0 ){
          System.out.println(" saldo insuficiente");
       }
 
