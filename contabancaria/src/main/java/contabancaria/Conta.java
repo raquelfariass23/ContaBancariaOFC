@@ -3,13 +3,16 @@ package contabancaria;
 public class Conta {
    double saldo = 40.0; 
    
+  
+
    public double deposito(double money){
 
       if(money==0 || money<0 ){
-         setSaldo(getSaldo() + money);
-    
+      
+        System.out.println("operacao invalida");
       }
-        return money+getSaldo();
+      setSaldo(getSaldo() + money);
+        return getSaldo();
       
    }
 
