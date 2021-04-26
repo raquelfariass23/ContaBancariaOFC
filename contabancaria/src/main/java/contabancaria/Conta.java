@@ -3,12 +3,13 @@ package contabancaria;
 public class Conta {
    double saldo = 40.0; 
    
+   //operação de depósito na conta bancária
    public class OperacaoInvalida extends Exception{
       private static final long serialVersionUID=1L;
     }
 
    public double deposito(double money) throws OperacaoInvalida{
-
+      //condicional que evita depósitos nulos ou negativos
       if(money==0 || money<0 ){
       throw new OperacaoInvalida();
       }
@@ -16,6 +17,15 @@ public class Conta {
              return getSaldo();
    }
 
+
+
+
+
+
+
+
+
+   //GET & SETTER DE SALDO
    public double getSaldo(){
       return this.saldo;
    }
