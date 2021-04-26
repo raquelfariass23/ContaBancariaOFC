@@ -1,9 +1,7 @@
 package contabancaria;
 
-import javax.sound.sampled.SourceDataLine;
-
 public class Conta {
-   double saldo = 40.0; 
+   double saldo = 10.0; 
    
    //operação de depósito na conta bancária
    public class OperacaoInvalida extends Exception{
@@ -19,13 +17,14 @@ public class Conta {
              return getSaldo();
    }
 
+   //operação de saque na conta bancária
    public class SaldoInsuficiente extends Exception{
       private static final long serialVersionUID=1L;
     }
    public double saque(double money) throws SaldoInsuficiente {
-
-      if(money>getSaldo()){
-         System.out.println(" saldo insuficiente");
+      //condicional que impede que o valor sacado seja maior do que o saldo da conta
+      if(getSaldo()<money){
+         throw new SaldoInsuficiente();
       }
 
       else{
@@ -35,10 +34,6 @@ public class Conta {
       return getSaldo();
 
    }
-
-
-
-
 
 
    //GET & SETTER DE SALDO
