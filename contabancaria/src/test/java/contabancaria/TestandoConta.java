@@ -18,11 +18,14 @@ class TestandoConta {
     public void setUp() {
         conta = new Conta();
     }
-
-
+   
     @Test
     public void TesteDeposito() throws OperacaoInvalida {
 
         assertEquals(conta.getSaldo() + 40,conta.deposito(40));
+    }
+    @Test
+    public void TesteSaque(){
+        assertEquals(conta.getSaldo() -20,conta.saque(20) );
     }
 }
