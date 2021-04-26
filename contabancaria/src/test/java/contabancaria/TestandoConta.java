@@ -28,6 +28,6 @@ class TestandoConta {
 
     @Test
     public void TesteSaque() throws SaldoInsuficiente{
-        assertEquals(conta.getSaldo() - 60 ,conta.saque(60) );
+        assertEquals(conta.getSaldo() - 70 ,conta.saque(70) );
     }
 }
