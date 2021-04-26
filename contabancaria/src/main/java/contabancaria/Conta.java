@@ -24,7 +24,7 @@ public class Conta {
     }
    public double saque(double money) throws SaldoInsuficiente {
 
-      if(money>getSaldo() || money==0 ){
+      if(money>getSaldo()){
          System.out.println(" saldo insuficiente");
       }
 
