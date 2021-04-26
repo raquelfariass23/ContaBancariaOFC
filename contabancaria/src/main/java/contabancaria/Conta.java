@@ -1,5 +1,7 @@
 package contabancaria;
 
+import javax.sound.sampled.SourceDataLine;
+
 public class Conta {
    double saldo = 40.0; 
    
@@ -18,7 +20,19 @@ public class Conta {
    }
 
 
+   public double saque(double money){
 
+      if(money>getSaldo() || money<=0){
+         System.out.println(" saldo insuficiente");
+      }
+
+      else{
+         setSaldo(getSaldo() - money);
+      }
+
+      return getSaldo();
+
+   }
 
 
 
