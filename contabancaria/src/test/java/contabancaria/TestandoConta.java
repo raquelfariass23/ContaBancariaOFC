@@ -23,11 +23,11 @@ class TestandoConta {
     @Test
     public void TesteDeposito() throws OperacaoInvalida {
 
-        assertEquals(conta.getSaldo() + 40,conta.deposito(40));
+        assertEquals(conta.saldo + 40,conta.deposito(40));
     }
 
     @Test
     public void TesteSaque() throws SaldoInsuficiente{
-        assertEquals(conta.getSaldo() - 10 ,conta.saque(10) );
+        assertEquals(conta.saldo - 10 ,conta.saque(10) );
     }
 }
